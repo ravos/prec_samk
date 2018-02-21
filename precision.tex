@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{report}
+\setcounter{secnumdepth}{5}
+
+\usepackage{indentfirst}
+\usepackage{xtab}
+\usepackage{longtable}
+\setlength{\LTleft}{0pt}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{dingbat}
+
+\textwidth=7in
+\textheight=9in
+\hoffset=-1in
+\voffset=-1in
+\newlength{\br}
+\setlength{\br}{8em}
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+\def\S{{\color{blue}$\spadesuit$}}
+\def\H{{\color{red}$\varheart$}}%
+\def\D{{\color{orange}$\vardiamond$}}
+\def\C{{\color{OliveGreen}$\clubsuit$}}
+\def\linklength{1cm}
+\def\bidlength{3cm}
+\newcommand{\mylink}[1]{\hyperlink{#1}{\leftpointright}}
+\newcommand{\mylinkb}[1]{\hyperlink{#1}{\rightpointleft}}
+\newcommand{\mylinkt}{\hyperlink{top}{\rightthumbsup}}
+
+%
+\newcommand{\hand}[4]{
+ \begin{minipage}[t]{\br}%I chose \br=8em
+ \begin{tabbing}
+ %width of parbox depends on the parameters:
+ %min{\br, max{string #1, ..., string #4}}
+  \(\spadesuit\)  \= #1 \\
+  \(\heartsuit\)  \> #2 \\
+  \(\diamondsuit\)\> #3 \\
+  \(\clubsuit\)   \> #4
+ \end{tabbing}
+ \end{minipage}     }%end \hand
+%
+% \hand doesn't work right in normal text mode.
+%
+\newcommand{\vhand}[4]{
+ \begin{tabular}{l@{ }l}
+ \(\spadesuit\)   & #1 \\
+ \(\heartsuit\)   & #2 \\
+ \(\diamondsuit\) & #3 \\
+ \(\clubsuit\)    & #4 \\
+ \end{tabular} } % end \vhand
+%
+% This is a kludge.
+%
+\newcommand{\dhand}{
+ \begin{minipage}[t]{\br}%I chose \br=8em
+ \begin{tabbing}
+  \ \\
+  \ \\
+  \ \\
+  \
+ \end{tabbing}
+ \end{minipage}     }%end \dhand
+%
+\newsavebox{\NESW}
+\savebox{\NESW}[4em]{%
+\raisebox{-1.5\baselineskip}%
+{\fbox{\small W
+   \raisebox{2.6ex}{N}
+   \hspace*{-1em}
+   \raisebox{-2.6ex}{S}
+   {E}
+      }
+}          }%end \NESW
+%
+\newcommand{\crdima}[6]{%
+\begin{tabular}[t]{lll}
+ #1 & #3             & #2\\
+ #4 & \usebox{\NESW} & #5\\
+    & #6             &
+\end{tabular}
+}%end \crdima
+%
+\newcommand{\twohandcrdima}[6]{%
+\begin{tabular}[t]{lll}
+ #4 & \usebox{\NESW} & #5\\
+\end{tabular}
+}%end \crdima
+%
+\newcommand{\cardcomb}[2]{%
+\begin{tabular}[t]{lll}
+      #1  \\
+      #2  \\
+\end{tabular}
+}%end \cardcomb
+%
+\newcommand{\allcardcomb}[4]{%
+\begin{tabular}[t]{lll}
+       & #1  \\
+       #4 & & #2 \\
+       & #3  \\
+\end{tabular}
+}%end \cardcomb
+%
+\newcommand{\hhand}[4]{%
+\(\spadesuit\)#1~~\(\heartsuit\)#2~~\(\diamondsuit\)#3~~\(\clubsuit\)#4}
+%
+\newenvironment{bidding}%
+{\begin{tabbing}
+ xxxx\=xxxxxx\=xxxxxx\=xxxxxx\=xxxxxx \kill
+ \>West  \>North \>East  \>South\\
+}{\end{tabbing} }%end bidding
+%
+% All the bids
+\newcommand{\spades}{\(\spadesuit\)}
+\newcommand{\hearts}{\(\heartsuit\)}
+\newcommand{\diamonds}{\(\diamondsuit\)}
+\newcommand{\clubs}{\(\clubsuit\)}
+\newcommand{\breaker}{\par \noindent \rule[.05in]{6.5in}{.005in} \par \noindent}
+%
+
+%\title{}
+
+\begin{document}
+
+%\maketitle
+\setcounter{chapter}{-1}
+\input{./Open.tex}
+\input{./1C.tex}
+\input{./1D.tex}
+\input{./1M.tex}
+\input{./1NT.tex}
+\input{./2C.tex}
+\input{./2D.tex}
+
+%\input{./Notes.tex}
+
+\end{document}
