@@ -12,21 +12,20 @@
 \end{bidding}
 
 \begin{longtable}{C{\linklength} C{\bidlength} l}
-\mylinkb{1M} & \mylinkt &
-\mylink{1Mcomp} \\
+\mylinkb{1M} & \mylinkt & \mylink{1Mcomp} \\
 \mylink{1h1s} & 1\S & 5+HCP, 4+\S s, forcing \\
 & 1NT & semi-forcing \\
-& 2\C &5+\C\ or BAL(2+\C) GF \\
-& 2\D &5+\D\ GF \\
-& 2\H &7-10HCP, 3+\H \\
-& 2\S &6+\S s, Preemptive \\
-\mylink{1h2n} & {2NT} &4+\H s, slam interest \\
-& 3\C &4+\H s INV [O] 3\H=NF \\
-& 3\D &4+\H s Mixed [O] 3\H=NF \\
-& 3\H &4+\H s Preemptive \\
+& 2\C & 5+\C\ or BAL(2+\C) GF \\
+& 2\D & 5+\D\ GF \\
+& 2\H & 7-10HCP, 3+\H \\
+& 2\S & 6+\S s, preemptive \\
+\mylink{1h2n} & {2NT} & 4+\H s, slam interest \\
+& 3\C & 4+\H s INV [O] 3\H=NF \\
+& 3\D & 4+\H s mixed [O] 3\H=NF \\
+& 3\H & 4+\H s preemptive \\
 & 3\S/4\C/4\D & 12+HCP, splinter \\
-& 3NT &3\H(334), pick a game \\
-& 4\H & 3+\H s, no slam interest \\
+& 3NT & 3\H(334), pick a game \\
+& 4\H & 3+\H s, wide range, no slam interest \\
 \end{longtable}
 
 \hypertarget{1s}{}
@@ -37,17 +36,17 @@
 \begin{longtable}{C{\linklength} C{\bidlength} l}
 \mylinkb{1M} & \mylinkt \\
 & 1NT & semi-forcing \\
-& 2\C &5+\C\ or BAL(2+\C) GF \\
+& 2\C & 5+\C\ or BAL(2+\C) GF \\
 & 2\D/2\H &5+\D/\H\ GF \\
-& 2\S &7-10HCP, 3+\S \\
+& 2\S & 7-10HCP, 3+\S \\
 \mylink{1s2n} & {2NT} &4+\S s, slam interest \\
-& 3\C &4+\S s INV [O] 3\S=NF \\
-& 3\D &4+\S s Mixed [O] 3\S=NF \\
-& 3\H &6+\H s INV [O] 3\S=NF \\
-& 3\S & less than INV \\
-& 3NT &3\S(334), pick a game \\
+& 3\C & 4+\S s INV [O] 3\S=NF \\
+& 3\D & 4+\S s mixed [O] 3\S=NF \\
+& 3\H & 6+\H s INV [O] 3\S=NF \\
+& 3\S & 4+\S s preemptive \\
+& 3NT & 3\S(334), pick a game \\
 & 4\C/4\D/4\H & 12+HCP, splinter \\
-& 4\S & 3+\S s, no slam interest \\
+& 4\S & 3+\S s, wide range, no slam interest \\
 \end{longtable}
 
 \hypertarget{1h1s}{}
@@ -107,17 +106,15 @@
 
 \begin{longtable}{C{\linklength} C{\bidlength} l}
 \mylinkb{1h} & \mylinkt \\
-& 3\C & all MIN \\
-& & [R] 3\D=GF ask shortness. 3\H=LR INV. 4\H=signoff \\
-& 3\D & MAX with shortness \\
-& & [R] 3\H=GF ask shortness. 4\H=signoff. Other=cuebid slam interest \\
-& 3\H & MAX 6(322) \\
-& 3\S & MAX 5(422) [R] 3NT=ask side suit [O] LMH \\
-& 3NT & MAX 5(332), usually has weak side suit(s), otherwise would open 1NT \\ 
-& 4\C/4\D & MAX 5+\C/\D s, 0-1 fast losers in each of other two suits \\
-& 4\H & MAX 7222 \\
+& 3\C & any MIN [R] \mylink{1h2n3c3d} 3\D=ask \\
+& 3\D & MAX, no shortness [R] 3\H=ask [O] same as 3\C-3\D \\
+& 3\H & MAX, 0-1\C \\
+& 3\S & MAX, 0-1\D \\
+& 3NT & MAX, 0-1\S \\ 
+& 4\C/4\D & 5+good \C/\D\ 2+ out of AKQ \\
 \end{longtable}
 
+\hypertarget{1h2n3c3d}{}
 \begin{bidding}
 \>\>1\H\>Pass\>2NT \\
 \>\>3\C\>Pass\>3\D \\
@@ -126,11 +123,11 @@
 
 \begin{longtable}{C{\linklength} C{\bidlength} l}
 \mylinkb{1h2n} & \mylinkt \\
-& 3\H & 6(322) \\
-& 3\S & has shortness [R] 3NT=ask [O] LMH \\
-& 3NT & 5(332) or 5(422). usually has weak side suit(s), otherwise would open 1NT \\ 
-& 4\C/4\D & 5+\C/\D s, 0-1 fast losers in each of other two suits \\
-& 4\H & 7222 \\
+& 3\H & has shortness [R] 3\S=ask [O] LMH \\
+& 3\S & no shortness 6+\H s \\
+& 3NT & no shortness 5332 or NT-ish 5422/6322 \\
+& 4\C/4\D & no shortness, cuebids \\
+& 4\H & no shortness, worst hand \\
 \end{longtable}
 
 \hypertarget{1s2n}{}
@@ -143,17 +140,15 @@
 
 \begin{longtable}{C{\linklength} C{\bidlength} l}
 \mylinkb{1s} & \mylinkt \\
-& 3\C & all MIN \\
-& & [R] 3\D=GF ask shortness. 3\S=LR INV. 4\S=signoff \\
-& 3\D & MAX with shortness \\
-& & [R] 3\H=GF ask shortness. 4\S=signoff. Other=cuebid slam interest \\
-& 3\H & MAX 5(422) [R] 3\S=ask side suit [O] LMH \\
-& 3\S & MAX 6(322) \\
-& 3NT & MAX 5(332), usually has weak side suit(s), otherwise would open 1NT \\ 
-& 4\C/4\D/4\H & MAX 5+\C/\D/\H s, 0-1 fast losers in each of other two suits \\
-& 4\S & MAX 7222 \\
+& 3\C & any MIN [R] \mylink{1s2n3c3d} 3\D=ask \\
+& 3\D & MAX, no shortness [R] 3\H=ask [O] same as 3\C-3\D \\
+& 3\H & MAX, 0-1\C \\
+& 3\S & MAX, 0-1\D \\
+& 3NT & MAX, 0-1\S \\ 
+& 4\C/4\D/4\H & 5+good \C/\D/\H\ 2+ out of AKQ \\
 \end{longtable}
 
+\hypertarget{1s2n3c3d}{}
 \begin{bidding}
 \>\>1\S\>Pass\>2NT \\
 \>\>3\C\>Pass\>3\D \\
@@ -162,11 +157,11 @@
 
 \begin{longtable}{C{\linklength} C{\bidlength} l}
 \mylinkb{1s2n} & \mylinkt \\
-& 3\H & 6(322) \\
-& 3\S & has shortness [R] 3NT=ask [O] LMH \\
-& 3NT & 5(332) or 5(422). usually has weak side suit(s), otherwise would open 1NT \\ 
-& 4\C/4\D & 5+\C/\D s, 0-1 fast losers in each of other two suits \\
-& 4\H & 7222 \\
+& 3\H & has shortness [R] 3\S=ask [O] LMH \\
+& 3\S & no shortness 6+\S s \\
+& 3NT & no shortness 5332 or NT-ish 5422/6322 \\
+& 4\C/4\D/4\H & no shortness, cuebids \\
+& 4\S & no shortness, worst hand \\
 \end{longtable}
 
 \hypertarget{1Mcomp}{}
